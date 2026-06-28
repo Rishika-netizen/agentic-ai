@@ -61,15 +61,15 @@ Be specific, natural and friendly. Do not start with 'I'."""
         for row in results:
             sku = row["sku"]
 
-            # Budget filter
+
             if row["price_inr"] > budget:
                 continue
 
-            # Preference filter
+
             if sku in disliked_products:
                 continue
 
-            # Inventory check
+
             stock_info = self.inventory_agent.check_stock(
                 customer_id,
                 sku
@@ -77,7 +77,7 @@ Be specific, natural and friendly. Do not start with 'I'."""
             if not stock_info["available"]:
                 continue
 
-            # LLM generated reason
+
             reason = self.generate_reason(
                 row["name"],
                 style,
@@ -92,7 +92,7 @@ Be specific, natural and friendly. Do not start with 'I'."""
                 "reason": reason
             })
 
-        # fixed - moved outside loop
+
         log_agent_action(
             customer_id,
             "RecommendationAgent",

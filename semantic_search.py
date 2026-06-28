@@ -14,7 +14,7 @@ products["price_inr"] = (
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# setup chromadb
+
 chroma_client = chromadb.PersistentClient(
     path="data/vectordb"
 )
@@ -23,7 +23,7 @@ collection = chroma_client.get_or_create_collection(
     name="products"
 )
 
-# only index if empty
+
 if collection.count() == 0:
     print("Indexing products into vector DB...")
 

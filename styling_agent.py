@@ -31,7 +31,7 @@ class StylingAgent:
 
     def detect_style(self, query):
 
-        # Step 1 — embedding based detection
+
         query_embedding = self.model.encode([query])
         similarities = cosine_similarity(
             query_embedding,
@@ -41,7 +41,7 @@ class StylingAgent:
         confidence = similarities[best_index]
         style = list(self.styles.keys())[best_index]
 
-        # Step 2 — if confidence is low, use LLM
+
         if confidence < 0.3:
             style = self.llm_detect_style(query)
 

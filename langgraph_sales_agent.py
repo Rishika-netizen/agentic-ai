@@ -12,9 +12,7 @@ from human_support_agent import HumanSupportAgent
 from session_manager import SessionManager
 from agent_logger import log_agent_action
 
-# ----------------------------
-# Agent Objects
-# ----------------------------
+
 styling_agent = StylingAgent()
 recommendation_agent = RecommendationAgent()
 inventory_agent = InventoryAgent()
@@ -22,9 +20,7 @@ payment_agent = PaymentAgent()
 human_support_agent = HumanSupportAgent()
 session_manager = SessionManager()
 
-# ----------------------------
-# Shared State
-# ----------------------------
+
 class SalesState(TypedDict):
     customer_id: str
     query: str
@@ -37,9 +33,7 @@ class SalesState(TypedDict):
     escalation: dict
     error: str
 
-# ----------------------------
-# Styling Node
-# ----------------------------
+
 def styling_node(state):
     style = styling_agent.detect_style(
         state["query"]
@@ -51,9 +45,7 @@ def styling_node(state):
     )
     return {"style": style}
 
-# ----------------------------
-# Recommendation Node
-# ----------------------------
+
 def recommendation_node(state):
     recommendations = (
         recommendation_agent.recommend_products(
@@ -74,9 +66,7 @@ def recommendation_node(state):
     )
     return {"recommendations": recommendations}
 
-# ----------------------------
-# Inventory Node
-# ----------------------------
+
 def inventory_node(state):
     inventory_results = {}
     for product in state["recommendations"]:
@@ -94,9 +84,7 @@ def inventory_node(state):
     )
     return {"inventory_status": inventory_results}
 
-# ----------------------------
-# Payment Node
-# ----------------------------
+
 def payment_node(state):
     payment_result = payment_agent.process_payment(
         state["customer_id"],
@@ -113,9 +101,7 @@ def payment_node(state):
     )
     return {"payment_result": payment_result}
 
-# ----------------------------
-# Human Support Node
-# ----------------------------
+
 def human_support_node(state):
     escalation = human_support_agent.escalate(
         state["customer_id"],
@@ -128,17 +114,13 @@ def human_support_node(state):
     )
     return {"escalation": escalation}
 
-# ----------------------------
-# Conditional Routing
-# ----------------------------
+
 def payment_router(state):
     if state["payment_result"]["status"] == "success":
         return "success"
     return "failure"
 
-# ----------------------------
-# Graph
-# ----------------------------
+
 graph = StateGraph(SalesState)
 
 graph.add_node("styling", styling_node)
@@ -147,9 +129,7 @@ graph.add_node("inventory", inventory_node)
 graph.add_node("payment", payment_node)
 graph.add_node("human_support", human_support_node)
 
-# ----------------------------
-# Edges
-# ----------------------------
+
 graph.add_edge(START, "styling")
 graph.add_edge("styling", "recommendation")
 graph.add_edge("recommendation", "inventory")
@@ -164,14 +144,10 @@ graph.add_conditional_edges(
 )
 graph.add_edge("human_support", END)
 
-# ----------------------------
-# Compile
-# ----------------------------
+
 sales_graph = graph.compile()
 
-# ----------------------------
-# Run
-# ----------------------------
+
 if __name__ == "__main__":
     print("\n===== LANGGRAPH JOURNEY =====\n")
 

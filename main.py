@@ -19,9 +19,7 @@ app = FastAPI(
     version="1.0"
 )
 
-# =========================
-# LOAD DATA
-# =========================
+
 
 products_df = pd.read_csv(
     "data/products.csv",
@@ -50,9 +48,7 @@ with open("data/loyalty.json", "r") as f:
 
 with open("data/pos.json", "r") as f:
     pos_data = json.load(f)
-# =========================
-# REQUEST MODELS
-# =========================
+
 
 class PaymentRequest(BaseModel):
     customer_id: str
@@ -65,9 +61,7 @@ class EventRequest(BaseModel):
     channel: str
     sku: str | None = None
 
-# =========================
-# PRODUCT CATALOG API
-# =========================
+
 
 @app.get("/")
 def home():
@@ -151,9 +145,7 @@ def get_skus():
         .tolist()
     )
 
-# =========================
-# CUSTOMER API
-# =========================
+
 
 @app.get("/customers")
 def get_customers():
@@ -173,9 +165,7 @@ def get_customer(customer_id: str):
     )
 
 
-# =========================
-# INVENTORY API
-# =========================
+
 
 @app.get("/inventory")
 def get_inventory():
@@ -219,9 +209,7 @@ def check_stock(
     }
 
 
-# =========================
-# LOYALTY API
-# =========================
+
 
 @app.get("/loyalty")
 def get_all_loyalty():
@@ -240,9 +228,7 @@ def get_loyalty(customer_id: str):
     return loyalty[customer_id]
 
 
-# =========================
-# POS API
-# =========================
+
 
 @app.get("/pos")
 def get_pos():
@@ -258,9 +244,7 @@ def get_customer_pos(customer_id: str):
     )
 
 
-# =========================
-# PAYMENT API
-# =========================
+
 
 @app.post("/payment")
 def process_payment(
@@ -283,9 +267,7 @@ def process_payment(
     }
 
 
-# =========================
-# JOURNEY EVENT API
-# =========================
+
 
 @app.post("/journey/event")
 def record_event(

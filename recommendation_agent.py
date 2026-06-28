@@ -1,65 +1,86 @@
 import pandas as pd
-import json
+from preference_layer import get_preferences
+from inventory_agent import InventoryAgent
+from semantic_search import semantic_search
+from agent_logger import log_agent_action
 
-products = pd.read_csv("data/products.csv")
-products["price_inr"] = (
-    products["price"] * 85
-).round()
 
-with open("data/inventory.json", "r") as f:
-    inventory = json.load(f)
 
-print(products[["sku", "price", "price_inr"]].head())
+class RecommendationAgent:
 
-def recommend_products(category, budget):
+    def __init__(self):
 
-    results = products[
-        (
-            products["terms"]
-            .str.contains(
-                category,
-                case=False,
-                na=False
-            )
+        self.products = pd.read_csv(
+            "data/products.csv"
         )
-        &
-        (
-            products["price_inr"] <= budget
+
+        self.products["price_inr"] = (
+            self.products["price"] * 85
+        ).round()
+
+        self.inventory_agent = InventoryAgent()
+
+    def recommend_products(
+            self,
+            customer_id,
+            query,
+            budget,
+            style
+    ):
+
+        preferences = get_preferences(
+            customer_id
         )
-    ]
 
-    recommendations = []
+        disliked_products = (
+            preferences["disliked_products"]
+        )
 
-    for _, row in results.iterrows():
+        results = semantic_search(
+            query,
+            top_k=20
+        )
 
-        sku = row["sku"]
+        recommendations = []
 
-        if sku in inventory:
+        for row in results:
 
-            stock = inventory[sku]["sizes"]
+            sku = row["sku"]
 
-            total_stock = sum(stock.values())
+            # Budget filter
+            if row["price_inr"] > budget:
+                continue
 
-            if total_stock > 0:
+            # Preference filter
+            if sku in disliked_products:
+                continue
 
-                recommendations.append(
-                    {
-                        "sku": sku,
-                        "name": row["name"],
-                        "price_usd": row["price"],
-                        "price_inr": row["price_inr"],
-                        "stock": total_stock
-                    }
+            # Inventory check
+            stock_info = (
+                self.inventory_agent
+                .check_stock(
+                    customer_id,
+                    sku
                 )
-                print("Category:", category)
-                print("Budget:", budget)
+            )
 
-    return recommendations[:5]
+            if not stock_info["available"]:
+                continue
 
-print(products["terms"].unique())
-print(
-    recommend_products(
-        "jeans",
-        7000
-    )
-)
+            recommendations.append(
+                {
+                    "sku": sku,
+                    "name": row["name"],
+                    "price_inr": row["price_inr"],
+                    "stock": stock_info["stock"],
+                    "reason":
+    f"Matches your {style} style preference and is currently available in stock"
+                }
+
+            )
+            log_agent_action(
+                customer_id,
+                "RecommendationAgent",
+                "Generated recommendations"
+            )
+            return recommendations[:5]

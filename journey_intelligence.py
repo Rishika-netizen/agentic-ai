@@ -1,15 +1,18 @@
 from collections import Counter
 import json
 
+
 def get_customer_events(customer_id):
 
     with open("data/journey_events.json", "r") as f:
         events = json.load(f)
 
     return [
-        e for e in events
-        if e["customer_id"] == customer_id
+        event
+        for event in events
+        if event["customer_id"] == customer_id
     ]
+
 
 def build_profile(customer_id):
 
@@ -33,7 +36,8 @@ def build_profile(customer_id):
 
     preferred_channel = (
         channel_counts.most_common(1)[0][0]
-        if channel_counts else "Unknown"
+        if channel_counts
+        else "Unknown"
     )
 
     favorite_products = [
@@ -44,6 +48,7 @@ def build_profile(customer_id):
     purchases = event_counts["purchase"]
     cart = event_counts["cart"]
     wishlist = event_counts["wishlist"]
+    views = event_counts["view"]
 
     if purchases > 0:
         intent = "Very High"
@@ -54,16 +59,26 @@ def build_profile(customer_id):
     else:
         intent = "Low"
 
+    intent_score = (
+        views * 5
+        + wishlist * 15
+        + cart * 30
+        + purchases * 50
+    )
+
     return {
         "customer_id": customer_id,
-        "views": event_counts["view"],
+        "views": views,
         "wishlist": wishlist,
         "cart": cart,
         "purchase": purchases,
         "purchase_intent": intent,
+        "intent_score": intent_score,
         "preferred_channel": preferred_channel,
         "favorite_products": favorite_products
     }
+
+
 def generate_memory(customer_id):
 
     profile = build_profile(customer_id)
@@ -77,22 +92,47 @@ Preferred Channel:
 Purchase Intent:
 {profile['purchase_intent']}
 
+Intent Score:
+{profile['intent_score']}
+
 Frequently Viewed Products:
 {', '.join(profile['favorite_products'])}
 """
 
     return memory
-print(generate_memory("C001"))
+
+
 def save_memory(customer_id):
 
     memory = generate_memory(customer_id)
 
-    with open("data/customer_memories.json", "r") as f:
-        memories = json.load(f)
+    try:
+        with open(
+            "data/customer_memories.json",
+            "r"
+        ) as f:
+            memories = json.load(f)
+
+    except:
+        memories = {}
 
     memories[customer_id] = memory
 
-    with open("data/customer_memories.json", "w") as f:
-        json.dump(memories, f, indent=4)
+    with open(
+        "data/customer_memories.json",
+        "w"
+    ) as f:
+        json.dump(
+            memories,
+            f,
+            indent=4
+        )
 
-save_memory("C001")
+
+if __name__ == "__main__":
+
+    save_memory("C001")
+
+    print(build_profile("C001"))
+
+    print(generate_memory("C001"))

@@ -41,6 +41,20 @@
         "sku": "272145190-250-2",
         "timestamp": "2026-06-15 23:25:40.889959"
     },
+  {
+    "customer_id": "C001",
+    "event_type": "dislike",
+    "channel": "Website",
+    "sku": "324908098-800-38",
+    "reason": "Too expensive"
+},
+  {
+    "customer_id": "C001",
+    "event_type": "dislike",
+    "channel": "Website",
+    "sku": "315738965-802-34",
+    "reason": "Did not like fit"
+},
     {
         "customer_id": "C002",
         "event_type": "view",

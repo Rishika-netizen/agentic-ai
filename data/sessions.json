@@ -1,0 +1,42 @@
+{
+    "C001": {
+        "current_channel": "Instagram",
+        "last_query": "comfortable jeans for college",
+        "recommended_skus": [
+            "330590505-500-2"
+        ],
+        "selected_sku": "326540983-802-36",
+        "last_agent": "RecommendationAgent",
+        "last_payment": {
+            "customer_id": "C001",
+            "amount": 5000,
+            "status": "bank_timeout",
+            "recovery": "Retry after a few minutes"
+        }
+    },
+    "C003": {
+        "current_channel": "WhatsApp",
+        "recommended_skus": [
+            "330590505-500-2"
+        ],
+        "last_payment": {
+            "customer_id": "C003",
+            "amount": 4000,
+            "status": "success"
+        }
+    },
+    "C002": {
+        "current_channel": "Mobile App",
+        "recommended_skus": [
+            "312393140-406-2"
+        ],
+        "last_payment": {
+            "customer_id": "C002",
+            "amount": 4000,
+            "status": "upi_failure",
+            "recovery": "Try credit/debit card"
+        },
+        "last_updated": "2026-06-28T15:11:37.367491",
+        "previous_channel": "Mobile App"
+    }
+}

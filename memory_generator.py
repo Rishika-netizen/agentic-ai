@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 
+
 products = pd.read_csv("data/products.csv")
 
 with open("data/journey_events.json", "r") as f:
@@ -82,3 +83,19 @@ with open(
     )
 
 print(customer_memories)
+
+from preference_layer import get_preferences
+
+preferences = get_preferences(customer_id)
+
+customer_memories[customer_id] = {
+    "preferred_channel": preferred_channel,
+    "favorite_category": favorite_category,
+    "purchase_intent": intent,
+
+    "profile_dislikes":
+        preferences["disliked_products"],
+
+    "profile_reasons":
+        preferences["dislike_reasons"]
+}

@@ -9,37 +9,29 @@ class PaymentAgent:
             customer_id,
             amount
     ):
-
-        status = random.choice(
-            [
-                "success",
-                "upi_failure",
-                "bank_timeout"
-            ]
-        )
+        status = random.choice([
+            "success",
+            "upi_failure",
+            "bank_timeout"
+        ])
 
         response = {
             "customer_id": customer_id,
             "amount": amount,
-            "status": status
+            "status": status,
+            "message": "Payment successful" if status == "success" else "Payment failed"
         }
 
         if status == "upi_failure":
-
-            response["recovery"] = (
-                "Try credit/debit card"
-            )
+            response["recovery"] = "Try credit/debit card"
 
         elif status == "bank_timeout":
-
-            response["recovery"] = (
-                "Retry after a few minutes"
-            )
+            response["recovery"] = "Retry after a few minutes"
 
         log_agent_action(
             customer_id,
             "PaymentAgent",
-            f"Payment status: {status}"
+            f"Payment status: {status}, Amount: {amount}"
         )
 
         return response

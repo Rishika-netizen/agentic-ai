@@ -1,0 +1,7 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/sessions.json
+data/agent_logs.json
+data/vectordb/

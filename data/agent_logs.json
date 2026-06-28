@@ -526,5 +526,695 @@
         "customer_id": "C002",
         "agent": "SalesAgent",
         "action": "Channel switch: In-Store Kiosk \u2192 Mobile App"
+    },
+    {
+        "timestamp": "2026-06-28 15:47:50.807587",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 312393140-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 15:47:50.851342",
+        "customer_id": "C001",
+        "agent": "RecommendationAgent",
+        "action": "Generated recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 15:52:39.369543",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 312393140-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 15:52:39.426424",
+        "customer_id": "C001",
+        "agent": "RecommendationAgent",
+        "action": "Generated recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:01:02.692281",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 312393140-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:01:02.769975",
+        "customer_id": "C001",
+        "agent": "RecommendationAgent",
+        "action": "Generated recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:23:22.852665",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 312393140-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:23:22.934578",
+        "customer_id": "C001",
+        "agent": "RecommendationAgent",
+        "action": "Generated recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:23:22.991168",
+        "customer_id": "C001",
+        "agent": "PaymentAgent",
+        "action": "Payment status: success"
+    },
+    {
+        "timestamp": "2026-06-28 16:29:39.537842",
+        "customer_id": "C002",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual"
+    },
+    {
+        "timestamp": "2026-06-28 16:29:39.606549",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 312393140-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:29:39.660018",
+        "customer_id": "C002",
+        "agent": "RecommendationAgent",
+        "action": "Generated recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:29:39.714307",
+        "customer_id": "C002",
+        "agent": "RecommendationAgent",
+        "action": "Found 1 recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:29:39.760136",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 312393140-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:29:39.805053",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 1 products"
+    },
+    {
+        "timestamp": "2026-06-28 16:29:39.842767",
+        "customer_id": "C002",
+        "agent": "PaymentAgent",
+        "action": "Payment status: success"
+    },
+    {
+        "timestamp": "2026-06-28 16:29:39.933713",
+        "customer_id": "C002",
+        "agent": "PaymentAgent",
+        "action": "Payment status: success"
+    },
+    {
+        "timestamp": "2026-06-28 16:44:35.894485",
+        "customer_id": "system",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual (confidence: 0.68)"
+    },
+    {
+        "timestamp": "2026-06-28 16:44:35.945062",
+        "customer_id": "C002",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual"
+    },
+    {
+        "timestamp": "2026-06-28 16:44:36.031018",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 312393140-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:44:37.241862",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 275600408-400-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:44:37.370407",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 320680326-107-39"
+    },
+    {
+        "timestamp": "2026-06-28 16:44:37.534563",
+        "customer_id": "C002",
+        "agent": "RecommendationAgent",
+        "action": "Generated 3 recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:44:37.572592",
+        "customer_id": "C002",
+        "agent": "PaymentAgent",
+        "action": "Payment status: upi_failure"
+    },
+    {
+        "timestamp": "2026-06-28 16:44:37.598297",
+        "customer_id": "C002",
+        "agent": "HumanSupportAgent",
+        "action": "Escalated issue: upi_failure"
+    },
+    {
+        "timestamp": "2026-06-28 16:44:37.635717",
+        "customer_id": "C002",
+        "agent": "SalesAgent",
+        "action": "Channel switch: In-Store Kiosk \u2192 Mobile App"
+    },
+    {
+        "timestamp": "2026-06-28 16:44:38.295491",
+        "customer_id": "C002",
+        "agent": "FollowUpAgent",
+        "action": "Sent follow-up via Mobile App \u2014 payment success: False"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:18.859095",
+        "customer_id": "system",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual (confidence: 0.77)"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:18.900720",
+        "customer_id": "C001",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:18.970995",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 326540983-802-36"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:20.785502",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 315836999-406-34"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:20.952664",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 311303003-407-38"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:21.089357",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 312393140-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:21.252403",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 275600408-400-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:21.368184",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 335663355-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:21.494292",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 322612356-505-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:21.915261",
+        "customer_id": "C001",
+        "agent": "RecommendationAgent",
+        "action": "Generated 7 recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:21.945351",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 326540983-802-36"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:21.956841",
+        "customer_id": "C001",
+        "agent": "PaymentAgent",
+        "action": "Payment status: bank_timeout"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:21.977342",
+        "customer_id": "C001",
+        "agent": "HumanSupportAgent",
+        "action": "Escalated issue: bank_timeout"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:22.052039",
+        "customer_id": "system",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual (confidence: 0.77)"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:22.090071",
+        "customer_id": "C001",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:22.169754",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 326540983-802-36"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:22.519153",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 315836999-406-34"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:22.819356",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 311303003-407-38"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:23.136182",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 312393140-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:23.447199",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 275600408-400-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:23.888462",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 335663355-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:24.795315",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 322612356-505-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:46:24.916426",
+        "customer_id": "C001",
+        "agent": "RecommendationAgent",
+        "action": "Generated 7 recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:49:55.620096",
+        "customer_id": "system",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual (confidence: 0.73)"
+    },
+    {
+        "timestamp": "2026-06-28 16:49:55.680358",
+        "customer_id": "C003",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual"
+    },
+    {
+        "timestamp": "2026-06-28 16:49:55.779025",
+        "customer_id": "C003",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 330590505-500-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:49:56.684844",
+        "customer_id": "C003",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 281593208-015-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:49:56.884613",
+        "customer_id": "C003",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 316727555-700-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:49:57.161799",
+        "customer_id": "C003",
+        "agent": "RecommendationAgent",
+        "action": "Generated 3 recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:49:57.190384",
+        "customer_id": "C003",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 330590505-500-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:49:57.204816",
+        "customer_id": "C003",
+        "agent": "StoreReservationAgent",
+        "action": "Reserved 330590505-500-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:49:57.218271",
+        "customer_id": "C003",
+        "agent": "PaymentAgent",
+        "action": "Payment status: upi_failure"
+    },
+    {
+        "timestamp": "2026-06-28 16:49:57.257315",
+        "customer_id": "C003",
+        "agent": "HumanSupportAgent",
+        "action": "Escalated issue: upi_failure"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:46.493654",
+        "customer_id": "system",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual (confidence: 0.77)"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:46.526748",
+        "customer_id": "C001",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:46.585411",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 326540983-802-36"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:47.732111",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 315836999-406-34"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:47.936241",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 311303003-407-38"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:48.052806",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 312393140-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:48.162405",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 275600408-400-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:48.292524",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 335663355-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:48.411467",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 322612356-505-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:48.645534",
+        "customer_id": "C001",
+        "agent": "RecommendationAgent",
+        "action": "Generated 7 recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:48.704488",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 326540983-802-36"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:48.750243",
+        "customer_id": "C001",
+        "agent": "PaymentAgent",
+        "action": "Payment status: bank_timeout"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:49.015561",
+        "customer_id": "C001",
+        "agent": "HumanSupportAgent",
+        "action": "Escalated issue: bank_timeout"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:49.091854",
+        "customer_id": "system",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual (confidence: 0.77)"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:49.123599",
+        "customer_id": "C001",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:49.234022",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 326540983-802-36"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:49.376352",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 315836999-406-34"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:49.479860",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 311303003-407-38"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:49.766490",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 312393140-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:49.891243",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 275600408-400-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:50.011558",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 335663355-406-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:50.102779",
+        "customer_id": "C001",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 322612356-505-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:51:50.229657",
+        "customer_id": "C001",
+        "agent": "RecommendationAgent",
+        "action": "Generated 7 recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:54:18.132118",
+        "customer_id": "system",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual (confidence: 0.73)"
+    },
+    {
+        "timestamp": "2026-06-28 16:54:18.178732",
+        "customer_id": "C003",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual"
+    },
+    {
+        "timestamp": "2026-06-28 16:54:18.324550",
+        "customer_id": "C003",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 330590505-500-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:54:19.860780",
+        "customer_id": "C003",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 281593208-015-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:54:19.992650",
+        "customer_id": "C003",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 316727555-700-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:54:20.730199",
+        "customer_id": "C003",
+        "agent": "RecommendationAgent",
+        "action": "Generated 3 recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 16:54:20.830982",
+        "customer_id": "C003",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 330590505-500-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:54:20.883050",
+        "customer_id": "C003",
+        "agent": "StoreReservationAgent",
+        "action": "Reserved 330590505-500-2"
+    },
+    {
+        "timestamp": "2026-06-28 16:54:20.929933",
+        "customer_id": "C003",
+        "agent": "PaymentAgent",
+        "action": "Payment status: upi_failure"
+    },
+    {
+        "timestamp": "2026-06-28 16:54:21.491872",
+        "customer_id": "C003",
+        "agent": "HumanSupportAgent",
+        "action": "Escalated issue: upi_failure"
+    },
+    {
+        "timestamp": "2026-06-28 17:06:36.912940",
+        "customer_id": "system",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual (confidence: 0.68)"
+    },
+    {
+        "timestamp": "2026-06-28 17:06:36.958248",
+        "customer_id": "C002",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual"
+    },
+    {
+        "timestamp": "2026-06-28 17:06:37.039479",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "SKU 312393140-406-2 \u2014 stock: 69, available: True"
+    },
+    {
+        "timestamp": "2026-06-28 17:06:37.970275",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "SKU 275600408-400-2 \u2014 stock: 54, available: True"
+    },
+    {
+        "timestamp": "2026-06-28 17:06:38.124421",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "SKU 320680326-107-39 \u2014 stock: 55, available: True"
+    },
+    {
+        "timestamp": "2026-06-28 17:06:38.238387",
+        "customer_id": "C002",
+        "agent": "RecommendationAgent",
+        "action": "Generated 3 recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 17:06:38.268939",
+        "customer_id": "C002",
+        "agent": "PaymentAgent",
+        "action": "Payment status: success, Amount: 4000"
+    },
+    {
+        "timestamp": "2026-06-28 17:06:38.337212",
+        "customer_id": "C002",
+        "agent": "SalesAgent",
+        "action": "Channel switch: In-Store Kiosk \u2192 Mobile App"
+    },
+    {
+        "timestamp": "2026-06-28 17:06:38.659910",
+        "customer_id": "C002",
+        "agent": "FollowUpAgent",
+        "action": "Sent follow-up via Mobile App \u2014 payment success: True"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:39.309373",
+        "customer_id": "system",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual (confidence: 0.68)"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:39.371874",
+        "customer_id": "C002",
+        "agent": "StylingAgent",
+        "action": "Detected style: casual"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:39.498891",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "SKU 312393140-406-2 \u2014 stock: 69, available: True"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:41.792207",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "SKU 275600408-400-2 \u2014 stock: 54, available: True"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:42.011363",
+        "customer_id": "C002",
+        "agent": "RecommendationAgent",
+        "action": "Generated 2 recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:42.282139",
+        "customer_id": "C002",
+        "agent": "RecommendationAgent",
+        "action": "Found 2 recommendations"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:42.330379",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "SKU 312393140-406-2 \u2014 stock: 69, available: True"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:42.361707",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "SKU 275600408-400-2 \u2014 stock: 54, available: True"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:42.410021",
+        "customer_id": "C002",
+        "agent": "InventoryAgent",
+        "action": "Checked stock for 2 products"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:42.476742",
+        "customer_id": "C002",
+        "agent": "PaymentAgent",
+        "action": "Payment status: bank_timeout, Amount: 5000"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:42.553129",
+        "customer_id": "C002",
+        "agent": "PaymentAgent",
+        "action": "Payment status: bank_timeout"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:42.823529",
+        "customer_id": "C002",
+        "agent": "HumanSupportAgent",
+        "action": "Escalated issue: bank_timeout"
+    },
+    {
+        "timestamp": "2026-06-28 17:11:42.890756",
+        "customer_id": "C002",
+        "agent": "HumanSupportAgent",
+        "action": "Escalated issue: bank_timeout"
     }
 ]

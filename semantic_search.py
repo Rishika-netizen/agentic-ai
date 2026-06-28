@@ -1,57 +1,74 @@
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
+import os
+
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
+os.environ["HF_HUB_OFFLINE"] = "1"
+
+import chromadb
 import pandas as pd
+from sentence_transformers import SentenceTransformer
 
 products = pd.read_csv("data/products.csv")
 products["price_inr"] = (
-    products["price"] * 85
+        products["price"] * 95
 ).round()
 
-model = SentenceTransformer(
-    "all-MiniLM-L6-v2"
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+# setup chromadb
+chroma_client = chromadb.PersistentClient(
+    path="data/vectordb"
 )
 
-product_texts = []
+collection = chroma_client.get_or_create_collection(
+    name="products"
+)
 
-for _, row in products.iterrows():
+# only index if empty
+if collection.count() == 0:
+    print("Indexing products into vector DB...")
 
-    text = (
-        str(row["name"]) + " " +
-        str(row["description"]) + " " +
-        str(row["terms"])
+    product_texts = []
+    skus = []
+
+    for _, row in products.iterrows():
+        text = (
+                str(row["name"]) + " " +
+                str(row["description"]) + " " +
+                str(row["terms"])
+        )
+        product_texts.append(text)
+        skus.append(str(row["sku"]))
+
+    embeddings = model.encode(
+        product_texts
+    ).tolist()
+
+    collection.add(
+        documents=product_texts,
+        embeddings=embeddings,
+        ids=skus
     )
-
-    product_texts.append(text)
-
-product_embeddings = model.encode(
-    product_texts
-)
+    print(f"Indexed {len(skus)} products")
 
 
-def semantic_search(
-        query,
-        top_k=20
-):
-
+def semantic_search(query, top_k=20):
     query_embedding = model.encode(
         [query]
+    ).tolist()[0]
+
+    results = collection.query(
+        query_embeddings=[query_embedding],
+        n_results=top_k
     )
 
-    similarities = cosine_similarity(
-        query_embedding,
-        product_embeddings
-    )[0]
+    matched_skus = results["ids"][0]
 
-    top_indices = similarities.argsort()[
-        -top_k:
-    ][::-1]
+    output = []
+    for sku in matched_skus:
+        row = products[
+            products["sku"].astype(str) == sku
+            ]
+        if not row.empty:
+            output.append(row.iloc[0])
 
-    results = []
-
-    for idx in top_indices:
-
-        results.append(
-            products.iloc[idx]
-        )
-
-    return results
+    return output

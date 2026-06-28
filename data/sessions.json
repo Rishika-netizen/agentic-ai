@@ -1,9 +1,13 @@
 {
     "C001": {
-        "current_channel": "Instagram",
+        "current_channel": "WhatsApp",
         "last_query": "comfortable jeans for college",
         "recommended_skus": [
-            "330590505-500-2"
+            "326540983-802-36",
+            "315836999-406-34",
+            "311303003-407-38",
+            "312393140-406-2",
+            "275600408-400-2"
         ],
         "selected_sku": "326540983-802-36",
         "last_agent": "RecommendationAgent",
@@ -12,31 +16,40 @@
             "amount": 5000,
             "status": "bank_timeout",
             "recovery": "Retry after a few minutes"
-        }
+        },
+        "last_updated": "2026-06-28T16:51:50.241710",
+        "previous_channel": "WhatsApp"
     },
     "C003": {
         "current_channel": "WhatsApp",
         "recommended_skus": [
-            "330590505-500-2"
+            "330590505-500-2",
+            "281593208-015-2",
+            "316727555-700-2"
         ],
         "last_payment": {
             "customer_id": "C003",
             "amount": 4000,
-            "status": "success"
-        }
+            "status": "upi_failure",
+            "recovery": "Try credit/debit card"
+        },
+        "last_updated": "2026-06-28T16:54:20.988177",
+        "previous_channel": "WhatsApp"
     },
     "C002": {
         "current_channel": "Mobile App",
         "recommended_skus": [
-            "312393140-406-2"
+            "312393140-406-2",
+            "275600408-400-2"
         ],
         "last_payment": {
             "customer_id": "C002",
-            "amount": 4000,
-            "status": "upi_failure",
-            "recovery": "Try credit/debit card"
+            "amount": 5000,
+            "status": "bank_timeout",
+            "message": "Payment failed",
+            "recovery": "Retry after a few minutes"
         },
-        "last_updated": "2026-06-28T15:11:37.367491",
+        "last_updated": "2026-06-28T17:11:42.518851",
         "previous_channel": "Mobile App"
     }
 }

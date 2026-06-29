@@ -27,7 +27,7 @@ class FollowUpAgent:
                 else "payment failed"
             )
             response = client.chat.completions.create(
-                model="llama3-8b-8192",
+                model="llama-3.3-70b-versatile",
                 messages=[{
                     "role": "user",
                     "content": f"""You are a friendly retail assistant sending a follow-up message 

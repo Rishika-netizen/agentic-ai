@@ -15,9 +15,10 @@
             "customer_id": "C001",
             "amount": 5000,
             "status": "bank_timeout",
+            "message": "Payment failed",
             "recovery": "Retry after a few minutes"
         },
-        "last_updated": "2026-06-28T16:51:50.241710",
+        "last_updated": "2026-06-28T19:04:19.772464",
         "previous_channel": "WhatsApp"
     },
     "C003": {
@@ -40,16 +41,19 @@
         "current_channel": "Mobile App",
         "recommended_skus": [
             "312393140-406-2",
-            "275600408-400-2"
+            "275600408-400-2",
+            "311307610-400-39",
+            "311292244-800-39",
+            "320680326-107-39"
         ],
         "last_payment": {
             "customer_id": "C002",
-            "amount": 5000,
+            "amount": 4000,
             "status": "bank_timeout",
             "message": "Payment failed",
             "recovery": "Retry after a few minutes"
         },
-        "last_updated": "2026-06-28T17:11:42.518851",
+        "last_updated": "2026-06-28T18:56:35.906124",
         "previous_channel": "Mobile App"
     }
 }

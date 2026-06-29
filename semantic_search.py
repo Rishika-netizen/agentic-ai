@@ -23,21 +23,27 @@ collection = chroma_client.get_or_create_collection(
     name="products"
 )
 
-
 if collection.count() == 0:
     print("Indexing products into vector DB...")
 
     product_texts = []
     skus = []
+    seen = set()  # ADD THIS
 
     for _, row in products.iterrows():
+        sku = str(row["sku"])
+
+        if sku in seen:  # ADD THIS
+            continue  # skip duplicates
+        seen.add(sku)  # ADD THIS
+
         text = (
                 str(row["name"]) + " " +
                 str(row["description"]) + " " +
                 str(row["terms"])
         )
         product_texts.append(text)
-        skus.append(str(row["sku"]))
+        skus.append(sku)
 
     embeddings = model.encode(
         product_texts

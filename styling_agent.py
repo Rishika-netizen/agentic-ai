@@ -56,7 +56,7 @@ class StylingAgent:
     def llm_detect_style(self, query):
         try:
             response = client.chat.completions.create(
-                model="llama3-8b-8192",
+                model="llama-3.3-70b-versatile",
                 messages=[{
                     "role": "user",
                     "content": f"""Classify this shopping query into exactly one category:
